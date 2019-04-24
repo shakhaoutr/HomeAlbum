@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="apAnnMain" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.annotation.AddAnnotationController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" minHeight="20.0" minWidth="100.0" text="Picture" textAlignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lbPicPath" layoutX="100.0" layoutY="19.0" minHeight="20.0" minWidth="200.0" />
+      <TextArea fx:id="taAnn" layoutX="14.0" layoutY="61.0" minHeight="175.0" minWidth="560.0" prefHeight="175.0" prefWidth="570.0" wrapText="true">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <Button layoutX="14.0" layoutY="282.0" minHeight="20.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleAddAnnotation" text="Add">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="114.0" layoutY="282.0" minHeight="20.0" minWidth="70.0" mnemonicParsing="false" onAction="#handleCancelAnnotation" text="Cancel">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label fx:id="lbAnnErr" layoutX="14.0" layoutY="340.0" minHeight="20.0" minWidth="570.0" textFill="#dd0808" wrapText="true">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbShowAnnMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.annotation.ViewAnnotationController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <HBox minHeight="60.0" minWidth="780.0" spacing="10.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Label minHeight="50.0" minWidth="100.0" text="Picture">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbPicPath" minHeight="50.0" minWidth="200.0">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="tbAnnView" prefHeight="422.0" prefWidth="790.0">
+        <columns>
+          <TableColumn fx:id="tbColAnn" prefWidth="570.0" text="Annotation" />
+          <TableColumn fx:id="tbColAdd" minWidth="0.0" prefWidth="220.0" text="Added" />
+        </columns>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="52.0" prefWidth="790.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleAddAnnotation" prefHeight="40.0" prefWidth="200.0" text="Add Annotation">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleEditAnnotation" prefHeight="40.0" prefWidth="200.0" text="Edit Annotation">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleDeleteAnnotation" prefHeight="40.0" prefWidth="200.0" text="Delete Annotation">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

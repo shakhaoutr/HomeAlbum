@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="apEditAnn" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.annotation.EditAnnotationController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="199.0" text="Edit Annotation of : ">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPicPath" layoutX="229.0" layoutY="16.0">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="taAnn" layoutX="14.0" layoutY="71.0" prefHeight="200.0" prefWidth="770.0" wrapText="true">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <Button contentDisplay="CENTER" layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleEditConfirm" prefHeight="40.0" prefWidth="110.0" text="Save">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="174.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleEditCancel" prefHeight="40.0" prefWidth="110.0" text="Cancel">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

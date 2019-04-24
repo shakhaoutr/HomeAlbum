@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bpMain" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.picture.PictureDirectoryInsertController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <TextArea fx:id="taErrMsg" editable="false" prefHeight="100.0" prefWidth="630.0" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </TextArea>
+   </bottom>
+   <right>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="400.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Label layoutX="15.0" layoutY="15.0" minHeight="20.0" minWidth="120.0" text="Directory">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbDir" minHeight="20.0" minWidth="120.0" prefHeight="50.0" prefWidth="550.0" wrapText="true">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSelectDirectory" mnemonicParsing="false" onAction="#handleSelectDirectory" text="Select Directory" />
+            <Label minHeight="20.0" minWidth="120.0" text="Name">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="36.0" prefWidth="200.0" spacing="2.0">
+               <children>
+                  <TextField fx:id="tfName" minHeight="25.0" />
+                  <Label fx:id="lbExt" minHeight="25.0" minWidth="50.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Label minHeight="20.0" minWidth="120.0" text="Place">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfPlace" />
+            <Label minHeight="20.0" minWidth="120.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="dpDate" editable="false" showWeekNumbers="true" />
+            <Label minHeight="20.0" minWidth="120.0" text="Category">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <ChoiceBox fx:id="cbCat" prefWidth="150.0" />
+            <HBox spacing="30.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="btnPicSave" minHeight="20.0" minWidth="100.0" mnemonicParsing="false" onAction="#handlePictureSave" text="Save" />
+                  <Button fx:id="btnPicSaveSelected" layoutX="10.0" layoutY="10.0" minHeight="20.0" minWidth="100.0" mnemonicParsing="false" onAction="#handlePictureSaveSelected" text="Save Selected" />
+                  <Button fx:id="btnPicSaveAll" layoutX="10.0" layoutY="10.0" minHeight="20.0" minWidth="100.0" mnemonicParsing="false" onAction="#handlePictureSaveAll" text="SaveAll" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <AnchorPane fx:id="apImage" prefHeight="475.0" prefWidth="396.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" minHeight="20.0" minWidth="120.0" text="Images">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lvImgs" layoutX="14.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+            <ImageView fx:id="ivImg" fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

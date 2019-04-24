@@ -1,0 +1,7 @@
+BASE_DIR_PIC - C:\Users\User\Documents\NetBeansProjects\HomeAlbum\media\active\
+DB_CLASS - com.mysql.cj.jdbc.Driver
+DB_DRIVER - jdbc:mysql:
+DB_HOST - localhost:3306
+DB_NAME - home_album
+DB_USER - admin
+DB_PASSWD - admin

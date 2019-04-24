@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane fx:id="bpMain" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.picturegallery.PictureGalleryHorizontalController">
+   <center>
+      <AnchorPane fx:id="apMain" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <SplitPane layoutX="137.0" layoutY="140.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="800.0">
+                     <children>
+                        <StackPane fx:id="spPic" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Picture">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleInsertPicture" text="Insert New Picture" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleInsertMultiplePicture" text="Insert Multiple Picture" />
+              <MenuItem mnemonicParsing="false" onAction="#handleEditInformation" text="Edit Information" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleCollageMenu" text="Collage" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleDeletePicture" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Category">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleManageCategories" text="Manage Categories" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Label">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleManageLabels" text="Manage Labels" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSetLabels" text="Set Labels" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Comments">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleManageComments" text="Manage Comments" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Annotations">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleAddAnnotation" text="Add Annotation" />
+                  <MenuItem fx:id="miShowAnn" mnemonicParsing="false" onAction="#handleShowAnnaotation" text="Show Annotation" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvCat" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvLab" maxWidth="1.7976931348623157E308" onMouseClicked="#handleLabelViewClick" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+   <bottom>
+      <ScrollPane fx:id="slPic" hbarPolicy="ALWAYS" maxHeight="185.0" maxWidth="1.7976931348623157E308" minHeight="185.0" onScroll="#handleMouseScroll" prefHeight="185.0" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </ScrollPane>
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="lvDet" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

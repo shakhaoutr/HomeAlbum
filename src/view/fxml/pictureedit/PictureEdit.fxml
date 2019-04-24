@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="spMain" dividerPositions="0.1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.pictureedit.PictureEditController">
+  <items>
+    <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="30.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+         <children>
+            <MenuBar fx:id="mbHead" layoutX="101.0" layoutY="18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleMenuSave" text="Save" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleResizeMenu" text="Resize" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCropMenu" text="Crop" />
+                        <Menu mnemonicParsing="false" text="Filter">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleFilterBlackAndWhite" text="Black and White" />
+                              <Menu mnemonicParsing="false" text="Greyscale">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#handleFilterGSAveraging" text="Averaging" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSLuma" text="Luma" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSDesat" text="Desaturation" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSDecMin" text="Decomposition Min Value" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSDecMax" text="Decomposition Max Value" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSSngChRed" text="Single Channel Red Value" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSSngChGreen" text="Single Channel Green Value" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleFilterGSSngChBlue" text="Single Channel Blue Value" />
+                                </items>
+                              </Menu>
+                          <MenuItem mnemonicParsing="false" onAction="#handleFilterNegative" text="Negative" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleFilterSepia" text="Sepia" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Rotate">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#handleRotateToRight" text="+ 90º">
+                                 <graphic>
+                                    <ImageView fx:id="ivRotR" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../media/icon/rotate_r.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#handleRotateToLeft" text="- 90º">
+                                 <graphic>
+                                    <ImageView fx:id="ivRotL" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../media/icon/rotate_l.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuColorAdjust" text="Adjust Color" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleRestore" text="Restore" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Crop Type">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleCropTypeCircle" text="Circle" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCropTypeRectangle" text="Rectangle" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children></AnchorPane>
+    <AnchorPane fx:id="apPic" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+  </items>
+</SplitPane>
