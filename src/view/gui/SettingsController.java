@@ -57,19 +57,6 @@ public class SettingsController implements Initializable {
     private TextField tfDBHost;
     
     @FXML
-    void handelOpenSettings(ActionEvent event) {
-        DirectoryChooser dc = new DirectoryChooser();
-        String initD = lbSettings.getText();
-        if(!initD.equalsIgnoreCase("")){
-            dc.setInitialDirectory(new File(initD));
-        }
-        File selectedDirectory = dc.showDialog(Utilities.getParentStage(apMain));
-        if(selectedDirectory!=null){
-            lbSettings.setText(selectedDirectory.getAbsolutePath()+"\\");
-        }
-    }
-    
-    @FXML
     void handelOpenDir(ActionEvent event) {
         DirectoryChooser dc = new DirectoryChooser();
         String initD = lbDir.getText();
@@ -105,10 +92,6 @@ public class SettingsController implements Initializable {
 
     @FXML
     void handleSave(ActionEvent event) {
-        File dSet = new File(lbSettings.getText());
-        if(!dSet.exists()){
-            dSet.mkdirs();
-        }
         File dPic = new File(lbDir.getText());
         if(!dPic.exists()){
             dPic.mkdirs();
@@ -143,8 +126,6 @@ public class SettingsController implements Initializable {
     }
     
     private void saveSettings(){
-        String set = lbSettings.getText();
-        
         String dir = lbDir.getText();
         String cls = tfDBClass.getText();
         String dri = tfDBDriver.getText();

@@ -3,8 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/view/controller/category/ViewCategoryController.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/homealbum/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/Annotation.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/CollageImageText.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/PictureRecord.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/CollageImagePicture.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/LabelPic.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/Comment.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/Category.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/Label.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/Picture.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/GreyscaleMethod.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/view/gui/SettingsController.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/HomeAlbum/src/model/Settings.java</file>
         </group>
     </open-files>
 </project-private>
