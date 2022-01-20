@@ -14,9 +14,9 @@
             "type": "java",
             "name": "Launch HomeAlbum",
             "request": "launch",
-            "vmArgs": "--module-path C:/Users/User/Documents/VSCode/Java/HomeAlbum/javafx --add-modules javafx.controls,javafx.fxml", 
+            "vmArgs": "--module-path lib/javafx-sdk-17.0.2/lib --add-modules javafx.controls,javafx.fxml", 
             "mainClass": "homealbum.HomeAlbum",
-            "projectName": "HomeAlbum_5d9209ac"
+            "projectName": "HomeAlbumVS_41365969"
         }
     ]
 }
