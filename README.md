@@ -1,6 +1,6 @@
 # HomeAlbum
 Requirements :  
-	MySQL Database. You can use xampp : https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/  
+	MySQL Database. You can use xampp : https://www.apachefriends.org/download.html
 Use :   
  Create a MySql database and a root user for that database;  
  Set the parameter DB_NAME, DB_USER, DB_PASSWD in the SQLConnection class in package control;  
